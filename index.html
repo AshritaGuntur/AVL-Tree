@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVL Tree Visualizer - Master Data Structures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="landing-container">
+        <header class="landing-header">
+            <h1>AVL Tree <span>Mastery</span></h1>
+            <p>Interactive Visualization of Self-Balancing Binary Search Trees</p>
+        </header>
+
+        <section class="hero-content">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <h3>Self-Balancing</h3>
+                    <p>Watch the tree automatically maintain its height for O(log n) operations.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-rotate"></i>
+                    <h3>Real-time Rotations</h3>
+                    <p>See Left, Right, and Double Rotations happen step-by-step.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Educational Logs</h3>
+                    <p>Detailed logs explain every decision the algorithm makes.</p>
+                </div>
+            </div>
+
+            <a href="./visualization.html" class="cta-btn">
+                Launch Visualizer <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </section>
+
+        <section class="how-it-works"
+            style="max-width: 900px; text-align: left; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 1rem; border: 1px solid var(--node-border); margin-top: 2rem;">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--text-primary); font-size: 2rem;">How it
+                Works</h2>
+
+            <div class="step" style="margin-bottom: 1.5rem;">
+                <h3
+                    style="color: var(--accent-color); margin-bottom: 0.5rem; display:flex; align-items:center; gap:0.5rem;">
+                    <i class="fa-solid fa-1"></i> Insertion & Height
+                </h3>
+                <p style="color: var(--text-secondary); line-height: 1.6;">
+                    Every node maintains a <strong>height</strong> property. When you insert a value, it is placed
+                    according to BST rules (smaller to left, larger to right), and then we update the heights of all
+                    ancestors.
+                </p>
+            </div>
+
+            <div class="step" style="margin-bottom: 1.5rem;">
+                <h3
+                    style="color: var(--accent-color); margin-bottom: 0.5rem; display:flex; align-items:center; gap:0.5rem;">
+                    <i class="fa-solid fa-2"></i> Balance Factor
+                </h3>
+                <p style="color: var(--text-secondary); line-height: 1.6;">
+                    The <strong>Balance Factor (BF)</strong> is calculated as <code>Height(Left) - Height(Right)</code>.
+                    A tree is considered balanced if the absolute BF is ≤ 1. If BF is 2 or -2, the node is unbalanced.
+                </p>
+            </div>
+
+            <div class="step">
+                <h3
+                    style="color: var(--accent-color); margin-bottom: 0.5rem; display:flex; align-items:center; gap:0.5rem;">
+                    <i class="fa-solid fa-3"></i> Rotations
+                </h3>
+                <p style="color: var(--text-secondary); line-height: 1.6;">
+                    To fix imbalance, we perform <strong>Rotations</strong>:
+                <ul style="margin-left: 2rem; margin-top: 0.5rem; color: var(--text-secondary);">
+                    <li><strong>Left Rotation:</strong> Fixes Right-Heavy cases.</li>
+                    <li><strong>Right Rotation:</strong> Fixes Left-Heavy cases.</li>
+                    <li><strong>Double Rotations:</strong> Fixes mixed cases (Left-Right or Right-Left).</li>
+                </ul>
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Designed for Data Structure Students & Enthusiasts</p>
+        </footer>
+    </div>
+</body>
+
+</html>

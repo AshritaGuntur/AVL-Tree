@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVL Tree Visualizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fa-solid fa-tree"></i> AVL Tree <span>Visualizer</span></h1>
+            <p>Self-Balancing Binary Search Tree</p>
+        </header>
+
+        <div class="main-layout">
+            <div class="left-panel">
+                <div class="controls-panel">
+                    <div class="input-group">
+                        <input type="number" id="node-value" placeholder="Enter Value">
+                        <button id="insert-btn" class="btn primary"><i class="fa-solid fa-plus"></i> Insert</button>
+                        <button id="delete-btn" class="btn danger"><i class="fa-solid fa-trash"></i> Delete</button>
+                    </div>
+                    <button id="reset-btn" class="btn secondary">Reset Tree</button>
+                </div>
+
+                <div class="log-panel">
+                    <h3><i class="fa-solid fa-list-ul"></i> Operation Log</h3>
+                    <ul id="step-log">
+                        <li class="intro">Tree is empty. Insert a value to see steps.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tree-container" id="tree-container">
+                <!-- Tree will be rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="avl_tree.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
